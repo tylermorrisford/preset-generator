@@ -5,7 +5,7 @@ const args = process.argv.slice(2);
 
 // update these arguments to match your needs
 const fileName = args[0]; // assumes your csv file is in the same directory as this file
-const outputPath = args[1]; 
+const outputPath = args[1];
 const modelName = args[2]; // name of the model you are creating presets for
 
 // Running this should look something like this:
@@ -20,11 +20,10 @@ const createPresetContent = (nameOfPreset, nameOfModel, rawName, quantity) => `
 import type { T${nameOfModel}DraftBuilder } from '../../../types';
 import * as ${nameOfModel}Draft from '../../index';\n
 const ${nameOfPreset} = (): T${nameOfModel}DraftBuilder => 
-${nameOfModel}Draft.presets
-.empty()
-.sku('${rawName}')
-.quantityOnStock(${quantity});
-\n
+    ${nameOfModel}Draft.presets
+        .empty()
+        .sku('${rawName}')
+        .quantityOnStock(${quantity});\n
 export default ${nameOfPreset};\n
 `;
 
