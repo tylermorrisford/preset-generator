@@ -1,0 +1,16 @@
+{
+  "name": "preset-creator",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "create Ts test data presets",
+  "main": "createFiles.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tylermorrisford",
+  "license": "ISC",
+  "dependencies": {
+    "csv": "^6.3.3",
+    "csv-parse": "^5.5.0"
+  }
+}
